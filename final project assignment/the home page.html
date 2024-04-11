@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="favicon.webp" type="image/png">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.jpg" alt="Logo">
+            </div>
+            <nav>
+                <ul class="Functions">
+                    <li><a href="the home page.html">Home</a></li>
+                    <li><a href="the product page.html">Product </a></li>
+                    <li><a href="About.html">About us</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- History section -->
+    <div class="display">
+        <section class="history-section">
+            <div class="container">
+                <div class="history-info">
+                    <h2>Our History</h2>
+                    <p>The walkie-talkie's history dates back to the 1930s when Canadian inventor Donald Hings developed a portable radio signaling device for bush pilots. In 1940, Motorola created the first handheld two-way radio, which they called the "Handie-Talkie," for military use during World War II. These early devices were bulky and had limited range.</p>
+                    <p>After the war, walkie-talkies became more compact and affordable, leading to their adoption in various industries like construction, public safety, and security. In the 1960s, advancements in transistor technology further miniaturized walkie-talkies, making them more practical for personal and commercial use.</p>
+                    <p>Since then, walkie-talkies have evolved significantly, with improvements in range, battery life, and features like encryption and text messaging. Today, they remain widely used in numerous applications, including outdoor recreation, event management, and emergency response.</p>
+                </div>
+                <div class="history-image">
+                    <img class="mySlides" src="pic5.jpeg" alt="Company History Image">
+                    <img class="mySlides" src="pics3.jpeg" alt="Company History Image">
+                    <img class="mySlides" src="pic4.jpeg" alt="Company History Image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Product section -->
+        <section>
+            <div class="container">
+                <h1>Our Products</h1>
+                <div class="product-grid">
+                    <div class="product" onclick="showPrice('YAESU FT-411E Walkie Talkie', 'The set being sold is made up of original elements: - 2 YAESU FT 411 E walkie talkies - 2 batteries - 2 car adapters - 2 antennas - 2 leatherette covers - 1 battery charger Everything is in perfect condition because it has had very little use and works correctly.')">
+                        <div class="product-definition">YAESU FT-411E Walkie Talkie</div>
+                        <img src="walkie_talkie1.webp" alt="Walkie Talkie 1">
+                        <div class="product-title">Price: $200</div>
+                    </div>
+                    <div class="product" onclick="showPrice('VHF Aviation AM 8.33 kHz walkie-talkie Yaesu FTA-250L', 'The Yaesu FTA-250L is a transceiver for the VHF AM aviation band from 118 to 136Mhz, IPX5 and MIL-STD-810F approved for use in harsh environments with rain, splashes and projections. The new Yaesu FTA-250L aviation VHF handset is 8.33 kHz and 25 kHz compatible. An audio output of 700 mW ensures that radio calls are not lost even in noisy environments. The FTA-250 also includes a noise reduction function on reception and transmission.')">
+                        <div class="product-definition">VHF Aviation AM 8.33 kHz walkie-talkie Yaesu FTA-250L</div>
+                        <img src="walkie_talkie2.jpg" alt="Walkie Talkie 2">
+                        <div class="product-title">Price: $300</div>
+                    </div>
+                    <div class="product" onclick="showPrice('Yaesu FT-70D Walkie Talkie C4FM / FM Dual-Band', 'The Yaesu FT-7D walkie-talkie offers clear communication in FM and C4FM digital modes. With automatic mode selection, numeric ID display, and 700mW audio output, it ensures convenient and loud communication. Its compact design, robust features, and long battery life make it ideal for diverse applications.')">
+                        <div class="product-definition">Yaesu FT-70D Walkie Talkie C4FM / FM Dual-Band</div>
+                        <img src="walkie_talkie3.jpg" alt="Walkie Talkie 3">
+                        <div class="product-title">Price: $250</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 YAESU THE RADIO. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Automatic Slideshow 
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000);
+        }
+    </script>
+</body>
+</html>
